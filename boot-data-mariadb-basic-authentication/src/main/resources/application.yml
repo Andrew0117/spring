@@ -1,0 +1,15 @@
+logging:
+  file: /tmp/spring/example/application.log
+  level:
+    root: WARN
+    spring.example: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org:
+      hibernate:
+                type: trace
+                show_sql: true
+                format_sql: true
+
+server:
+      port: 8084
