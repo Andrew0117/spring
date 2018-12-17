@@ -1,0 +1,199 @@
+#body-main{
+    padding:0; 
+    margin:0; 
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+#body-main-t{
+    padding:0; 
+    margin:0; 
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+#content-main{
+    padding:0; 
+    margin:0; 
+    width:900px; 
+    height:630px;
+    margin-left:auto; 
+    margin-right:auto; 
+    background-repeat:repeat-x;
+}
+
+#block-main{
+    margin-bottom: 10px;
+    padding: 0;
+    margin: 0; 
+    width: 95%; 
+    height: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
+    left: 20px;
+    font: 13px verdana;
+    padding: 5px; 
+    opacity: 0.9;
+    background-color: #f9fcf9;
+    background-image: linear-gradient(#e0e7db, #85937f 50%);
+    border-bottom: 1px solid #4a504a;
+}
+
+#block-main #block-navigation{
+    background-color: #a9b1a9;
+    background-image: linear-gradient(#979c93, #6a7167 50%);
+    border-bottom: 1px solid #2b2d2b;
+    min-height: 30px;
+    margin: 0; 
+    padding: 0;
+}
+
+#block-main #block-navigation a{
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 0 0 12px;
+    cursor: pointer;
+}
+
+#block-main #block-desc-ad p{
+    font-family: verdana; 
+    font-size: 12px; 
+    font-style: italic; 
+    color: black; 
+    text-align: left;
+    margin: 0; 
+    margin-left: 10px; 
+    margin-top: 10px; 
+    margin-bottom: 5px;
+}
+
+#block-main #block-description p{
+    font-family: verdana; 
+    font-size: 12px; 
+    font-style: italic; 
+    color: black; 
+    text-align: left;
+    margin: 0; 
+    margin-left: 10px; 
+    margin-top: 10px; 
+    margin-bottom: 5px;
+}
+
+#block-main #block-description .resource{
+    font-family: verdana, arial, sans-serif; 
+    font-size: 14px; 
+    font-style: italic; 
+    color: black; 
+    text-align: center;
+    margin-top: 5px; 
+    margin-bottom: 5px;
+}
+
+#block-form{
+    height: auto;
+}
+
+#block-form .resource{
+    font-family: verdana, arial, sans-serif; 
+    font-size: 14px; 
+    font-style: italic; 
+    color: black; 
+    text-align: center; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#block-form td{
+    font-size: 12px;
+    font-family: verdana, arial, sans-serif;
+    font-weight: normal;
+}
+#block-form td input{
+    border: 1px solid #bdc7d8; 
+    width: 130px;
+    text-align: center;
+    height: 24px; 
+    font-size: 12px; 
+    font-family: verdana, arial, sans-serif;
+}
+
+#block-form input{
+    border: 1px solid #bdc7d8;
+    text-align: center;
+    height: 24px; 
+    font-size: 12px; 
+    font-family: verdana, arial, sans-serif;
+}
+
+#block-form td .inputsubmitt{
+    border: 1px solid #bdc7d8; 
+    float: right;
+    width: 150px; 
+    text-align: center;
+    height: 24px; 
+    font-size: 12px; 
+    font-family: verdana, arial, sans-serif;
+}
+
+#block-form .inputsubmitt{
+    border: 1px solid #bdc7d8; 
+    float: right;
+    width: 250px; 
+    text-align: center;
+    height: 24px; 
+    font-size: 12px; 
+    font-family: verdana, arial, sans-serif;
+}
+
+#block-form .input-ins{
+    border: 1px solid #bdc7d8; 
+    text-align: center;
+    height: 24px; 
+    font-size: 12px; 
+    font-family: verdana, arial, sans-serif;
+}
+
+#block-main #content-table{
+    font-size: 12px;
+    font-family: verdana, arial, sans-serif;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+#block-filter .inputtext{
+    border: 1px solid #bdc7d8; 
+    width: 130px;
+    text-align: center;
+    height: 24px; 
+    font-size: 12px; 
+    font-family: verdana, arial, sans-serif;
+}
+
+#block-filter p{
+    font-family: verdana, arial, sans-serif; 
+    font-size: 12px; 
+    font-style: italic; 
+    color: black; 
+    text-align: left; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#block-filter .resource{
+    font-family: verdana, arial, sans-serif; 
+    font-size: 14px; 
+    font-style: italic; 
+    color: black; 
+    text-align: center; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

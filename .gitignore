@@ -6,3 +6,4 @@
 **/.project
 **/*.iml
 **/.classpath
+**/nb-configuration.xml
