@@ -50,7 +50,13 @@ public class EmployeeVM implements VMInterface {
 
     public String getId() { return id.toString(); }
 
-    public void setId(String id) { this.id = new ObjectId(id); }
+    public void setId(String id) {
+        if(id != null){
+            this.id = new ObjectId(id);
+        }else{
+            this.id = new ObjectId();
+        }
+    }
 
     public String getName() {
         return name;

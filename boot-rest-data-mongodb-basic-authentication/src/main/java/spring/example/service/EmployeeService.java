@@ -40,9 +40,9 @@ public class EmployeeService implements EmployeeInterface<EmployeeVM> {
     public List<EmployeeVM> getAll() {
         List<Employee> listEmployee = employeeRepository.findAll();
         List<EmployeeVM> listEmployeeVM = listEmployee.stream().map(EmployeeVM::new).collect(Collectors.toList());
-        for(EmployeeVM empVM : listEmployeeVM){
-            for(Employee emp : listEmployee){
-                if(empVM.getId().equals(emp.getId())){
+        for (EmployeeVM empVM : listEmployeeVM) {
+            for (Employee emp : listEmployee) {
+                if (empVM.getId().equals(emp.getId())) {
                     empVM.setDepartmentsVM(emp.getDepartments().stream().map(DepartmentVM::new).collect(Collectors.toSet()));
                 }
             }
@@ -54,16 +54,16 @@ public class EmployeeService implements EmployeeInterface<EmployeeVM> {
     public Page<EmployeeVM> getAllPage(Pageable pageable) {
         List<Employee> listEmployee = employeeRepository.findAll(pageable).getContent();
         List<EmployeeVM> listEmployeeVM = listEmployee.stream().map(EmployeeVM::new).collect(Collectors.toList());
-        for(EmployeeVM empVM : listEmployeeVM){
-            for(Employee emp : listEmployee){
-                if(empVM.getId().equals(emp.getId())){
+        for (EmployeeVM empVM : listEmployeeVM) {
+            for (Employee emp : listEmployee) {
+                if (empVM.getId().equals(emp.getId())) {
                     empVM.setDepartmentsVM(emp.getDepartments().stream().map(DepartmentVM::new).collect(Collectors.toSet()));
                 }
             }
         }
         Page<EmployeeVM> pageEmployeeVM = new PageImpl<EmployeeVM>(listEmployeeVM, pageable, listEmployeeVM.size());
 
-        return  pageEmployeeVM;
+        return pageEmployeeVM;
     }
 
     @Override
@@ -76,12 +76,12 @@ public class EmployeeService implements EmployeeInterface<EmployeeVM> {
     }
 
     @Override
-    public List<EmployeeVM> getAllAge(int from, int to){
+    public List<EmployeeVM> getAllAge(int from, int to) {
         List<Employee> listEmployee = employeeRepository.findEmployeesBetweenAge(from, to);
         List<EmployeeVM> listEmployeeVM = listEmployee.stream().map(EmployeeVM::new).collect(Collectors.toList());
-        for(EmployeeVM empVM : listEmployeeVM){
-            for(Employee emp : listEmployee){
-                if(empVM.getId().equals(emp.getId())){
+        for (EmployeeVM empVM : listEmployeeVM) {
+            for (Employee emp : listEmployee) {
+                if (empVM.getId().equals(emp.getId())) {
                     empVM.setDepartmentsVM(emp.getDepartments().stream().map(DepartmentVM::new).collect(Collectors.toSet()));
                 }
             }
@@ -90,19 +90,23 @@ public class EmployeeService implements EmployeeInterface<EmployeeVM> {
     }
 
     @Override
-    public EmployeeVM save(EmployeeVM employeeVM){
+    public EmployeeVM save(EmployeeVM employeeVM) {
         EmployeeVM empVM = new EmployeeVM(employeeRepository.save(employeeVM.getEmployee()));
         Set<DepartmentVM> departmentVMS = new HashSet<>();
-        employeeVM.getDepartmentsVM().forEach(departmentVM -> {
-            Department department = departmentVM.getDepartment();
-            department.setEmployees(Arrays.asList(new Employee[]{empVM.getEmployee()}));
-            departmentVMS.add(new DepartmentVM(departmentRepository.save(department)));
-        });
+        if (employeeVM.getDepartmentsVM() != null && !employeeVM.getDepartmentsVM().isEmpty()) {
+            employeeVM.getDepartmentsVM().forEach(departmentVM -> {
+                Department department = departmentVM.getDepartment();
+                department.setEmployees(Arrays.asList(new Employee[]{empVM.getEmployee()}));
+                departmentVMS.add(new DepartmentVM(departmentRepository.save(department)));
+            });
+        }
         empVM.setDepartmentsVM(departmentVMS);
         return empVM;
     }
 
     @Override
-    public void delete(String id){ employeeRepository.deleteById(new ObjectId(id)); }
+    public void delete(String id) {
+        employeeRepository.deleteById(new ObjectId(id));
+    }
 
 }
