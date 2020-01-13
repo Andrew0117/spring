@@ -24,7 +24,7 @@ import java.util.Map;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig extends WebMvcConfigurationSupport {
-
+    /*http://localhost:8084/swagger-ui.html*/
     @Bean
     public Docket productApi() {
         List<SecurityScheme> schemeList = new ArrayList<>();

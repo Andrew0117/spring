@@ -97,6 +97,7 @@
                 <version>2.0.4.RELEASE</version>
             </plugin>
         </plugins>
+        <finalName>boot-web-data-jsp-mariadb</finalName>
     </build>
 
 
