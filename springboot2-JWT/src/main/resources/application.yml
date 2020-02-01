@@ -1,0 +1,13 @@
+jwt:
+  secret: jwtsecretkey
+spring:
+  datasource:
+    password: gfhjkm
+    platform: mysql
+    url: jdbc:mysql://192.168.56.109:3306/jwt?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
