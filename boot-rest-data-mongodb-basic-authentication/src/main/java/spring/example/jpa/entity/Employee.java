@@ -3,8 +3,12 @@ package spring.example.jpa.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.TextScore;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -18,13 +22,22 @@ import java.util.Set;
  */
 @Document
 public class Employee implements Serializable {
-
+	/*
+	 * https://codeboje.de/spring-data-mongodb/
+	 */
+	
     private static final long serialVersionUID = -1184658370946198436L;
 
     @Id
-    private ObjectId id;
+    private String id;
 
+    //@TextIndexed
+    @Indexed(unique = false)
+    //@Field("zip_code")
     private String name;
+    
+    //@TextScore
+    //private Float textScore;
 
     private Integer age;
 
@@ -37,11 +50,11 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

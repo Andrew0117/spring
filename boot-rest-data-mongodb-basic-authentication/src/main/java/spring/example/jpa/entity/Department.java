@@ -22,7 +22,7 @@ public class Department implements Serializable {
     private static final long serialVersionUID = -5378594792485940660L;
 
     @Id
-    private ObjectId id;
+    private String id;
 
     private String name;
 
@@ -37,11 +37,11 @@ public class Department implements Serializable {
     public Department() {
     }
 
-    public ObjectId getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(ObjectId id) {
+    public void setId(String id) {
         this.id = id;
     }
 

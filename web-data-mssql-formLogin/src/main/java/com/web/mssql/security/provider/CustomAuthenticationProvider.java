@@ -2,7 +2,8 @@ package com.web.mssql.security.provider;
 
 import com.web.mssql.entity.projection.VwUserWithRole;
 import com.web.mssql.jpa.UsersRepository;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,7 +23,7 @@ import java.util.List;
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
-    private static final Logger LOGGER = Logger.getLogger(CustomAuthenticationProvider.class);
+    private static final Logger LOGGER = LogManager.getLogger(CustomAuthenticationProvider.class);
 
     @Autowired
     private UsersRepository usersRepository;

@@ -11,6 +11,8 @@ import spring.example.config.SecurityConfig;
  *
  * @author Berezhnov Andrey <Andrey at andrew.my@yahoo.com>
  */
+// https://grokonez.com/spring-framework/spring-data/spring-data-mongooperations-accessing-mongo-database
+// https://www.youtube.com/watch?v=YUdxKYHmaCM&list=RDCMUC7yfnfvEUlXUIfm8rGLwZdA&start_radio=1
 
 @SpringBootApplication
 @PropertySource(value = {"classpath:application.properties"})

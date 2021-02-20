@@ -2,6 +2,7 @@ package spring.example.service;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -26,7 +27,11 @@ import java.util.stream.Collectors;
 @Scope(value = "singleton")
 public class DepartmentService implements ServiceInterface<DepartmentVM> {
 
-    @Autowired
+	
+	 @Autowired
+	 /* 
+	 * @Qualifier(value = "departmentRepository")
+	 */
     private DepartmentRepository departmentRepository;
 
     @Override

@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class EmployeeVM implements VMInterface {
 
-    private ObjectId id;
+    private String id;
 
     @Size(max = 256)
     private String name;
@@ -48,14 +48,15 @@ public class EmployeeVM implements VMInterface {
         return employee;
     }
 
-    public String getId() { return id.toString(); }
+    public String getId() { return id/*.toString()*/; }
 
     public void setId(String id) {
-        if(id != null){
-            this.id = new ObjectId(id);
-        }else{
-            this.id = new ObjectId();
-        }
+//        if(id != null){
+//            this.id = new ObjectId(id);
+//        }else{
+//            this.id = new ObjectId();
+//        }
+        this.id = id;
     }
 
     public String getName() {

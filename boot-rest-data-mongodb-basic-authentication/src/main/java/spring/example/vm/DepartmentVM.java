@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class DepartmentVM implements VMInterface {
 
-    private ObjectId id;
+    private String id;
 
     @Size(max = 256)
     private String name;
@@ -49,9 +49,9 @@ public class DepartmentVM implements VMInterface {
         return department;
     }
 
-    public String getId() { return id.toString(); }
+    public String getId() { return id/*.toString()*/; }
 
-    public void setId(String id) { this.id = new ObjectId(id); }
+    public void setId(String id) { this.id = id;/* this.id = new ObjectId(id);*/ }
 
     public String getName() {
         return name;

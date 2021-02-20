@@ -17,7 +17,10 @@
         <springframework.version>5.0.6.RELEASE</springframework.version>
         <springsecurity.version>4.2.6.RELEASE</springsecurity.version>
         <springsecurityoauth2.version>2.0.10.RELEASE</springsecurityoauth2.version>
-        <jackson.library>2.9.5</jackson.library>
+        <jackson.library>2.12.1</jackson.library>
+        <jaxb>2.3.2</jaxb>
+        <mariadb>2.4.1</mariadb>
+        <javax.servlet>3.1.0</javax.servlet>
     </properties>
 
     <dependencies>
@@ -72,32 +75,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.7.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mongodb/bson -->
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>bson</artifactId>
-            <version>3.7.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-            <version>2.0.0.RELEASE</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb-parent -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb-parent</artifactId>
-            <version>2.0.7.RELEASE</version>
-            <type>pom</type>
+            <version>${javax.servlet}</version>
         </dependency>
 
         <dependency>
@@ -109,21 +87,21 @@
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
-            <version>2.4.1</version>
+            <version>${mariadb}</version>
         </dependency>
 
         <!-- API, java.xml.bind module -->
         <dependency>
             <groupId>jakarta.xml.bind</groupId>
             <artifactId>jakarta.xml.bind-api</artifactId>
-            <version>2.3.2</version>
+            <version>${jaxb}</version>
         </dependency>
 
         <!-- Runtime, com.sun.xml.bind module -->
         <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
-            <version>2.3.2</version>
+            <version>${jaxb}</version>
         </dependency>
 
     </dependencies>

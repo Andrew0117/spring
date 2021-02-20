@@ -5,8 +5,6 @@ import com.h2embedded.entity.Organization;
 import com.h2embedded.util.JsonUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Spy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,10 +27,6 @@ public class OrganizationControllerTest {
 
     @Autowired
     private MockMvc mvc;
-
-    @Spy
-    @InjectMocks
-    private OrganizationController organizationController;
 
     @Test
     public void addOrganization() throws Exception {

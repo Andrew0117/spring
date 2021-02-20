@@ -1,6 +1,5 @@
 package spring.example;
 
-import org.springframework.context.annotation.ComponentScan;
 import spring.example.config.SecurityConfig;
 import spring.example.config.JpaConfig;
 import org.springframework.boot.SpringApplication;
