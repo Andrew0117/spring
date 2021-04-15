@@ -31,13 +31,6 @@ public class UserControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @Spy
-    @InjectMocks
-    private UserController userController;
-
-    @Spy
-    private UserService userService;
-
     @Test
     public void addUser() throws Exception {
         User user = new User();
