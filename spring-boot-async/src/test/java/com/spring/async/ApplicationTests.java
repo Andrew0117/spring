@@ -26,6 +26,8 @@ class ApplicationTests {
                 CompletableFuture.supplyAsync(() ->
                         restTemplate.getForObject(HOST + "/api/title?resource=2", String.class));
 
+        CompletableFuture.allOf(facebook, yahoo, pinterest).join();
+
         String facebookResponse = facebook.get();
         String yahooResponse = yahoo.get();
         String pinterestResponse = pinterest.get();
