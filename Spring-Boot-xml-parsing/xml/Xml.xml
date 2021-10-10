@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Body>
+		<ns2:GetTransactionsResponse xmlns:ns2="http://www.bankofamerica.com">
+		  <transactions>
+		    <transaction>
+		      <place>PLACE ONE</place>
+		      <amount>10.01</amount>
+		      <currency>AUD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>John</firstName>
+			<lastName>Johnson</lastName>
+			<inn>1234567890</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE TWO</place>
+		      <amount>9876.01</amount>
+		      <currency>AUD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>John</firstName>
+			<lastName>Johnson</lastName>
+			<inn>1234567890</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE THREE</place>
+		      <amount>12.01</amount>
+		      <currency>USD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>John</firstName>
+			<lastName>Johnson</lastName>
+			<inn>1234567890</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE FOUR</place>
+		      <amount>12.01</amount>
+		      <currency>EUR</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>John</firstName>
+			<lastName>Johnson</lastName>
+			<inn>1234567890</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE ONE</place>
+		      <amount>10.01</amount>
+		      <currency>AUD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Jack</firstName>
+			<lastName>Daniels</lastName>
+			<inn>1234567891</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE TWO</place>
+		      <amount>9876.01</amount>
+		      <currency>AUD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Jack</firstName>
+			<lastName>Daniels</lastName>
+			<inn>1234567891</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE THREE</place>
+		      <amount>12.01</amount>
+		      <currency>USD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Jack</firstName>
+			<lastName>Daniels</lastName>
+			<inn>1234567891</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE FOUR</place>
+		      <amount>12.01</amount>
+		      <currency>EUR</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Jack</firstName>
+			<lastName>Daniels</lastName>
+			<inn>1234567891</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE ONE</place>
+		      <amount>10.01</amount>
+		      <currency>AUD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Abraham</firstName>
+			<lastName>Lincoln</lastName>
+			<inn>1234567892</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE TWO</place>
+		      <amount>9876.01</amount>
+		      <currency>AUD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Abraham</firstName>
+			<lastName>Lincoln</lastName>
+			<inn>1234567892</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE THREE</place>
+		      <amount>12.01</amount>
+		      <currency>USD</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Abraham</firstName>
+			<lastName>Lincoln</lastName>
+			<inn>1234567892</inn>
+		      </client>
+		    </transaction>
+		    <transaction>
+		      <place>PLACE FOUR</place>
+		      <amount>12.01</amount>
+		      <currency>EUR</currency>
+		      <card>123456****1234</card>
+		      <client>
+			<firstName>Abraham</firstName>
+			<lastName>Lincoln</lastName>
+			<inn>1234567892</inn>
+		      </client>
+		    </transaction>
+		  </transactions>
+		</ns2:GetTransactionsResponse>
+	</soap:Body>
+</soap:Envelope>
