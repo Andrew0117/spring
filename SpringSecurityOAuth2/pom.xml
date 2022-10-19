@@ -17,7 +17,7 @@
         <springframework.version>5.0.6.RELEASE</springframework.version>
         <springsecurity.version>4.2.6.RELEASE</springsecurity.version>
         <springsecurityoauth2.version>2.0.10.RELEASE</springsecurityoauth2.version>
-        <jackson.library>2.12.1</jackson.library>
+        <jackson.library>2.13.4.1</jackson.library>
         <jaxb>2.3.2</jaxb>
         <mariadb>2.4.1</mariadb>
         <javax.servlet>3.1.0</javax.servlet>
