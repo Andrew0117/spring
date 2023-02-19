@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	<soap:Body>
-		<ns2:GetTransactionsResponse xmlns:ns2="http://www.bankofamerica.com">
+		<ns2:GetTransactionsResponse xmlns:ns2="http://bank.ua/">
 		  <transactions>
 		    <transaction>
 		      <place>PLACE ONE</place>

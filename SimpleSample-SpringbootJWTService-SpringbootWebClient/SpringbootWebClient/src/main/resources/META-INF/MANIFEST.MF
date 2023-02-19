@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: net.guides.springboot2.springboot2webappjsp.Springboot2Webap
+ pJspApplication
+
