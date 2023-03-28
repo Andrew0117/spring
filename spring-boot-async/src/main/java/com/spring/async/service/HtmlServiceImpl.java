@@ -25,7 +25,7 @@ public class HtmlServiceImpl implements HtmlService {
             throws IOException, FailingHttpStatusCodeException, MalformedURLException {
         LOG.info("Execute the URL to get the title {} ", url);
         LOG.info("Current thread name {} ", Thread.currentThread().getName());
-        WebClient webClient = new WebClient(getBrowser());
+        WebClient webClient = new WebClient(BrowserVersion.FIREFOX_24);
         webClient.getOptions().setJavaScriptEnabled(false);
         HtmlPage htmlPage = webClient.getPage(url);
         String title = htmlPage.getTitleText();
@@ -33,18 +33,4 @@ public class HtmlServiceImpl implements HtmlService {
         return CompletableFuture.completedFuture(title);
     }
 
-    private static final BrowserVersion getBrowser() {
-        BrowserVersion browser;
-        String applicationName = "Netscape";
-        String applicationVersion = "5.0 (Windows)";
-        String userAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0";
-        int browserVersionNumeric = 24;
-        browser = new BrowserVersion(applicationName, applicationVersion, userAgent, browserVersionNumeric) {
-            @Override
-            public boolean hasFeature(BrowserVersionFeatures property) {
-                return BrowserVersion.FIREFOX_24.hasFeature(property);
-            }
-        };
-        return browser;
-    }
 }

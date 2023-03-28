@@ -19,21 +19,21 @@ class ApplicationTests {
         CompletableFuture<String> facebook =
                 CompletableFuture.supplyAsync(() ->
                         restTemplate.getForObject(HOST + "/api/title?resource=0", String.class));
-        CompletableFuture<String> yahoo =
+        CompletableFuture<String> github =
                 CompletableFuture.supplyAsync(() ->
                         restTemplate.getForObject(HOST + "/api/title?resource=1", String.class));
         CompletableFuture<String> pinterest =
                 CompletableFuture.supplyAsync(() ->
                         restTemplate.getForObject(HOST + "/api/title?resource=2", String.class));
 
-        CompletableFuture.allOf(facebook, yahoo, pinterest).join();
+        CompletableFuture.allOf(facebook/*, yahoo*/, pinterest).join();
 
         String facebookResponse = facebook.get();
-        String yahooResponse = yahoo.get();
+        String githubResponse = github.get();
         String pinterestResponse = pinterest.get();
 
         Assertions.assertEquals("Facebook", facebookResponse.substring(0, 8));
-        Assertions.assertEquals("Yahoo", yahooResponse.substring(0, 5));
+        Assertions.assertEquals("GitHub", githubResponse.substring(0, 6));
         Assertions.assertEquals("Pinterest", pinterestResponse.substring(0, 9));
     }
 

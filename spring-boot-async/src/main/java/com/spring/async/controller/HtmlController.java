@@ -35,7 +35,7 @@ public class HtmlController {
                 resource = "https://www.facebook.com/";
                 break;
             case 1:
-                resource = "https://www.yahoo.com/";
+                resource = "https://github.com/";
                 break;
             default:
                 resource = "https://www.pinterest.com/";
