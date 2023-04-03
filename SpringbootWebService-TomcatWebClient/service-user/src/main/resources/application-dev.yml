@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    initialize: true
+    initialization-mode: always
+    platform: mariadb
+    url: jdbc:mariadb://localhost:3306/db?useUnicode=true;characterEncoding=UTF-8
+    username: root
+    password: password
+    driverClassName: org.mariadb.jdbc.Driver
+
+  jpa:
+    properties.hibernate:
+      format_sql: true
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    show-sql: true
+    database: MYSQL

@@ -1,0 +1,10 @@
+body {
+    padding:0; margin:0; 
+    background-color: #88b4f5;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    -moz-background-size: 100%;
+    -webkit-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
